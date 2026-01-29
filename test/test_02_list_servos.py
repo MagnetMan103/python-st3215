@@ -3,10 +3,12 @@
 Test 02: ListServos
 Scans the bus for all connected servos.
 """
+from dotenv import load_dotenv
 
 import os
 import sys
 from st3215 import ST3215
+load_dotenv(dotenv_path='.env')
 
 def main():
     print("=== ST3215 List Servos Test ===")

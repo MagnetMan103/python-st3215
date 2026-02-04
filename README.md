@@ -12,6 +12,10 @@ For linux:
 For mac
 ```ls /dev/tty.*```
 
+Then update the .env file with your connection path
+
+```ST3215_DEV = /dev/tty.usbmodem5A680113571``` (replace with your own /dev/route)
+
 Use custom_list.py to find all the servo ids that are currently connected.
 If some servos are missing from the servo list, that means 2 servos likely share the same id. To change the id, connect one servo by itself to the driver board and run the change_id.py script.
 

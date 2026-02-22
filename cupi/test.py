@@ -10,7 +10,16 @@ device = os.getenv('ST3215_DEV')
 servo = ST3215(device)
 
 
-print(servo.ReadPosition(3))
+print(servo.ReadPosition(4))
+print(servo.ReadPosition(2)) #2623
+print(servo.ReadPosition(1)) #517
+#servo.MoveTo(2, 2623) #outer servo near the sensors from 3400 to 1950 is range
+servo.MoveTo(1, 1000) #1430 to 3801
+
+
+#rest mode: servo2: position 3369, servo1: position 1436
+#active mode: servo2: position 2623, servo1: position 517
+
 # the range servos can move is 0 - 4095
 # important, please try not to move servos beyond limits that might break the pla carriage.
 
